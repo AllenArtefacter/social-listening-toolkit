@@ -1,6 +1,11 @@
 # Account & PWD
 *_confidential.json
 
+#Data
+.csv
+.xlsx
+
+
 #Others
 .vscode
 
