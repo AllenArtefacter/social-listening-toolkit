@@ -1,6 +1,9 @@
 # Account & PWD
 *_confidential.json
 
+#Others
+.vscode
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
