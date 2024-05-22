@@ -3,3 +3,6 @@ mysql-connector-python==8.0.33
 pandas==2.2.2
 # pymysql==1.1.0
 tqdm
+scikit-learn
+transformers
+sentence_transformers
