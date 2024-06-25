@@ -20,8 +20,14 @@ DATAPATH = '/root/autodl-tmp'
 data = pd.DataFrame()
 
 
+fs = os.listdir(DATAPATH + '/20M')
 
-for fp in tqdm(os.listdir(DATAPATH + '/20M')):
+fs = sorted(fs)
+
+fs = fs[:10]
+print(fs)
+
+for fp in tqdm(fs):
     df_ = pickle.load(open(f'{DATAPATH}/20M/{fp}', 'rb'))
     data = pd.concat([data, df_], axis = 0) 
     del df_
@@ -88,7 +94,7 @@ for b, d in tqdm(data_rest.groupby('batch')):
     embeddings = model.encode(d['content'].tolist(), show_progress_bar=True, batch_size=BATCH_SIZE, device='cuda')
     embeddings_dict = dict(zip(d['id'].tolist(), embeddings.tolist()))
     #pickle.dump(embeddings_dict, open(os.path.join(OUTPUT_DIR, f'batch_{timestamp}.pkl'), 'wb'))
-    with open(f'{OUTPUT_DIR}/batch_{timestamp}.pickle', 'wb') as f :
+    with open(f'{OUTPUT_DIR}/batch1_{timestamp}.pickle', 'wb') as f :
         pickle.dump(embeddings_dict, f)
   del embeddings
   torch.cuda.empty_cache()
