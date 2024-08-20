@@ -23,3 +23,4 @@ Pepsi Case contains two parts, LLM and Fine-tunings
 
 #### Fine-tuning Performance
 ![image](https://github.com/AllenArtefacter/social-listening-toolkit/assets/95061007/d0a8d860-643b-47c8-90db-24166350d019)
+![ezgif com-combine](https://github.com/user-attachments/assets/88486498-bd16-4308-9d0b-f777480d08f5)
